@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FcPermissions</string>
+    <string name="btn_camera">相机</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="prompt_we_need_camera">我们需要您提供相关权限以使我们能够更好的为您服务.</string>
+    <string name="prompt_request_camara">我们即将请求相机相关的权限.是否前往请求?</string>
+    <string name="prompt_already_get_permission">已获得相机权限,开始做自己的事吧!</string>
+    <string name="prompt_been_denied">已被拒绝获取权限</string>
+</resources>
