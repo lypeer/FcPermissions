@@ -1,6 +1,6 @@
 # FcPermissions
 
-FcPermissions is a library to simplify basic system permissions logic when targeting Android M or higher.
+FcPermissions is a library to simplify basic system permissions logic when targeting Android M or higher. Chinese README is **[here](https://github.com/lypeer/FcPermissions/blob/master/README-CN.md)**
 
 ## Installation
 
