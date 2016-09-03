@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements FcPermissionsCall
 
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
+        Toast.makeText(this, R.string.prompt_been_denied, Toast.LENGTH_LONG).show();
         FcPermissions.checkDeniedPermissionsNeverAskAgain(this,
                 getString(R.string.prompt_we_need_camera),
                 R.string.setting, R.string.cancel, null, perms);

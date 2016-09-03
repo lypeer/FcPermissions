@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.lypeer.fcpermission.FcPermissionsB;
 import com.lypeer.fcpermission.impl.OnPermissionsDeniedListener;
+import com.lypeer.fcpermission.impl.OnPermissionsGrantedListener;
 
 import java.util.List;
 
@@ -33,15 +34,25 @@ public class MainBuilderActivity extends AppCompatActivity {
 
     private void requestCameraPermission() {
         mFcPermissionsB = new FcPermissionsB.Builder(this)
-                .rationale4ReqPer(getString(R.string.prompt_request_camara))
+                .onGrantedListener(new OnPermissionsGrantedListener() {
+                    @Override
+                    public void onPermissionsGranted(int requestCode, List<String> perms) {
+
+                    }
+                })
                 .onDeniedListener(new OnPermissionsDeniedListener() {
                     @Override
                     public void onPermissionsDenied(int requestCode, List<String> perms) {
-                        Toast.makeText(MainBuilderActivity.this , getString(R.string.prompt_been_denied) , Toast.LENGTH_SHORT).show();
+
                     }
                 })
-                .rationale4NeverAskAgain(getString(R.string.prompt_we_need_camera))
-                .requestCode(RC_CAMERA)
+                .positiveBtn4ReqPer(android.R.string.ok)
+                .negativeBtn4ReqPer(R.string.cancel)
+                .positiveBtn4NeverAskAgain(R.string.setting)
+                .negativeBtn4NeverAskAgain(R.string.cancel)
+                .rationale4ReqPer(getString(R.string.prompt_request_camara))//必需
+                .rationale4NeverAskAgain(getString(R.string.prompt_we_need_camera))//必需
+                .requestCode(RC_CAMERA)//必需
                 .build();
         mFcPermissionsB.requestPermissions(Manifest.permission.CAMERA);
     }
