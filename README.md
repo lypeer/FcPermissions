@@ -2,6 +2,10 @@
 
 FcPermissions is a library to simplify basic system permissions logic when targeting Android M or higher. Chinese README is **[here](https://github.com/lypeer/FcPermissions/blob/master/README-CN.md)**
 
+##Show
+
+![an achivement show](http://ac-cnyv47la.clouddn.com/dab17e3714601187.gif)
+
 ## Installation
 
 You can install FcPermissions by adding the following dependency to your `build.gradle`:
